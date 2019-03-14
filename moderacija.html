@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="moderator.css">
+        <title>Moderacija</title>
+    </head>
+    <body>
+    
+      <img src="img/logo.png" class="logo" alt="FONIS">
+      <img src="img/man-user.png" class="moderator" alt="FONIS"> 
+  
+      <div class="container">
+      
+      <h1>Pitanja i zahtevi</h1>
+        <ul class="requests">
+    
+        </ul>
+      </div>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDUJrxE__3inRed-kSS-hvIpjNHlgVY5Z8",
+            authDomain: "leonardo-3abae.firebaseapp.com",
+            databaseURL: "https://leonardo-3abae.firebaseio.com",
+            projectId: "leonardo-3abae",
+            storageBucket: "leonardo-3abae.appspot.com",
+            messagingSenderId: "1085746747528"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="js/moderacija.js"></script>
+    </body>
+    </html>

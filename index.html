@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="animation.css" />
+    <title>FONIS Hakaton</title>
+</head>
+
+<body>
+
+    <a href="index.html"><img src="img/logo.png" class="logo" alt="FONIS"></a>
+    <div class="container login text-center">
+        <h1>Login</h1>
+        <div>
+            <label for="psw">Unesi šifru svog tima:</label> <br>
+            <input type="password" placeholder="Unesi sifru" id="password" name="psw" required>
+            <button type="submit" onClick="login()">Login</button>
+        </div>
+
+    </div>
+    <div class="container main">
+        
+          <div class="notification"> 
+              <p class="notification-content">
+
+              </p>
+        <a href="javascript:void(0)" class="closeButton" >
+           X
+        </a>
+        <script src="close_notification.js"></script>
+        </div>
+        
+        <div class="account">
+           <p>Tim <span id="teamName"></span></p>
+           <p>Sala: <span id="sala"></span></p>
+        </div>
+        <p id="lastAnswer"></p>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <img class="moma" src="img/Moma.png" alt="Moma" name="moma" id="moma">
+                <div class="hr">
+
+                </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="parent">
+                    <div class="speech-bubble">
+                        <div class="answer">
+                            Reci šta treba? :)
+                        </div>
+                    </div>
+                </div>
+                <div class="request">
+                    <button type="submit" onClick="request('hranu')">Treba nam hrana</button>
+                    <button type="submit" onClick="request('pice')">Treba nam pice</button>
+                </div>
+
+                <input type="text" id="question" placeholder="tvoje pitanje...">
+                <button type="submit" onClick="customAsk()">Pitaj</button>
+
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+                <div class="questions">
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right">
+                <button id="agenda">Agenda</button>
+                <div id="myModal" class="modal">
+
+                    <div class="modal-content" id="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="text-left" id="proba">
+                        </div>
+                        <script src="popup.js"></script>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+  
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDUJrxE__3inRed-kSS-hvIpjNHlgVY5Z8",
+            authDomain: "leonardo-3abae.firebaseapp.com",
+            databaseURL: "https://leonardo-3abae.firebaseio.com",
+            projectId: "leonardo-3abae",
+            storageBucket: "leonardo-3abae.appspot.com",
+            messagingSenderId: "1085746747528"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

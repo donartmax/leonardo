@@ -1,0 +1,29 @@
+.notification {
+    width: 300px;
+    background-color: orange;
+    position: relative;
+    animation: notification 3s forwards;
+    border-radius: 10px;
+
+}
+
+.closeButton {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    float: right;
+    padding-right: 5px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+@keyframes notification {
+    from {
+        margin-left: -40%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
